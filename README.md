@@ -14,8 +14,8 @@ The probability of mutation: [0, 0.5], 0.2 (R: If more than 0.5, the algorithm i
 The round of crossover: [P/2, P], P (R: More offsprings can acelerate the convergence of the algorithm at the expense of time cost);  
 The maximum number of clusters: K (R: we should consider the worst case that nodes are significantly far from each other)  
 The bound of the value: 0 ~ K-1 (R: it is the index of the cluster)  
-The individual: an array of size K
-The radius, r: 50
+The individual: an array with the size of K  
+The radius, r: 25, 50 or 100 (R: it is not determined yet)  
 ## 3.2. Stopping criteria.
 Time counter is more than 1 min
 ## 3.3. Fitness function.
