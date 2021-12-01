@@ -1,4 +1,4 @@
-# Advanced-Software-Analysis-202102
+# Minimal clustering
 Individual project
 
 # 1. Justification of why you have chosen your topic.
