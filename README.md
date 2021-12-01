@@ -3,7 +3,7 @@ Individual project
 
 # 1. Justification of why you have chosen your topic.
 The topic is associated with the uav trajectory problem which is typically solved through two steps: clustering nodes and planning the shortest path covering the clusters.  
-
+There is an assumption that it is desired that the number of cluster should be as small as possible.
 # 2. What is the topic?
 The topic is grouping K nodes into N clusters, where N is no more than a given integer number, M. This can be coverted into a set covering problem.  
 The nodes can be grouped into cluster if they all locate within radius r of the point with the XY-coordinate that is the geometric mean of those nodes' XY-coordinates.  
