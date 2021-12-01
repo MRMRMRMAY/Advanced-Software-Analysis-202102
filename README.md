@@ -19,7 +19,8 @@ The radius, r: 25, 50 or 100 (R: it is not determined yet)
 ## 3.2. Stopping criteria.
 Time counter is more than 1 min
 ## 3.3. Fitness function.
-if the number of clusters is more than M, then fitness is sys.max; otherwise, the number of the clusters.
+if the number of clusters is more than M, then fitness is sys.max; otherwise, the number of the clusters.  
+(if the number of clusters is more than M or there is some node locating out of the cluster region, then fitness is sys.max; otherwise, the number of the clusters.)
 ## 3.4. Selection operator.
 if the population is large: tournament selection  
 otherwise: roulette wheel sampling OR stochastic sampling  
