@@ -16,6 +16,12 @@ The maximum number of clusters: K (R: we should consider the worst case that nod
 The bound of the value: 0 ~ K-1 (R: it is the index of the cluster)  
 The individual: an array with the size of K  
 The radius, r: 25, 50 or 100 (R: it is not determined yet)  
+
+The individual example (5 nodes):
+|node ID|1|2|3|4|5|
+|-|-|-|-|-|-|
+|cluster ID|0|0|1|0|1|
+
 ## 3.2. Stopping criteria.
 Time counter is more than 1 min
 ## 3.3. Fitness function.
