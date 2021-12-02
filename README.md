@@ -30,7 +30,7 @@ Time counter is more than 1 min
 w_i is the node in the cluster i.  
 c_j is the center of cluster j.  
 r is the redius of the circle shaped cluster.  
-1{.} is implicator function  
+1{.} is indicate function  
 ||a,b|| is the euclidean distance between the point a and b.
 ## 3.4. Selection operator.
 if the population is large: tournament selection  
