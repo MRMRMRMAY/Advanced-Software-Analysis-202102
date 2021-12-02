@@ -26,7 +26,7 @@ The individual example (5 nodes):
 ## 3.2. Stopping criteria.
 Time counter is more than 1 min
 ## 3.3. Fitness function.
-![image](https://github.com/MRMRMRMAY/Advanced-Software-Analysis-202102/edit/main/fitness.png)
+![image](https://github.com/MRMRMRMAY/Advanced-Software-Analysis-202102/blob/main/fitness.png)
 w_i is the node in the cluster i.  
 c_j is the center of cluster j.  
 r is the redius of the circle shaped cluster.  
