@@ -16,6 +16,7 @@ The round of crossover: [P/2, P], P (R: More offsprings can acelerate the conver
 The maximum number of clusters: N <= K (R: we should consider the worst case that nodes are significantly far from each other)  
 The individual: an array with the size of K  
 The radius, r: 100 (R: it is not determined yet)  
+The maximum interval interval between two generation where best-so-far result occurs, Max_inter: 1000.  
 
 The individual example (5 nodes):
 |node ID|1|2|3|4|5|
@@ -23,7 +24,7 @@ The individual example (5 nodes):
 |Implication value of cluster center|0|0|1|0|1|
 
 ## 3.2. Stopping criteria.
-Time counter is more than 1 min
+The interval between two generation where best-so-far result occurs is more than Max_inter.
 ## 3.3. Fitness function.
 ![image](https://github.com/MRMRMRMAY/Advanced-Software-Analysis-202102/blob/main/fitness.png)
 w_i is the node in the cluster i.  
