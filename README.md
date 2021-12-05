@@ -10,18 +10,17 @@ The nodes can be grouped into cluster if they all locate within radius r of the 
 # 3. Design decision explaining why you select:
 ## 3.1. Parameters such as the size of an initial population.
 The number of the nodes: K  
-The size of population, P: [1000, inif), 1500 (R: Larger population can acelerate the convergence of the algorithm at the expense of time cost);  
+The size of population, P: [1000, inif), 1000 (R: Larger population can acelerate the convergence of the algorithm at the expense of time cost);  
 The probability of mutation: [0, 0.5], 0.2 (R: If more than 0.5, the algorithm is the same as the random strategy);  
 The round of crossover: [P/2, P], P (R: More offsprings can acelerate the convergence of the algorithm at the expense of time cost);  
 The maximum number of clusters: N <= K (R: we should consider the worst case that nodes are significantly far from each other)  
-The bound of the value: 0 ~ N-1 (R: it is the index of the cluster)  
 The individual: an array with the size of K  
-The radius, r: 25, 50 or 100 (R: it is not determined yet)  
+The radius, r: 100 (R: it is not determined yet)  
 
 The individual example (5 nodes):
 |node ID|1|2|3|4|5|
 |-|-|-|-|-|-|
-|cluster ID|0|0|1|0|1|
+|Implication value of cluster center|0|0|1|0|1|
 
 ## 3.2. Stopping criteria.
 Time counter is more than 1 min
@@ -36,9 +35,9 @@ r is the redius of the circle shaped cluster.
 if the population is large: tournament selection  
 otherwise: roulette wheel sampling OR stochastic sampling  
 ## 3.5. Crossover operator.
-Single point crossover OR double points crossover  
+Double points crossover  
 ## 3.6. Mutation operator.
-Single point mutation: randomly select a position on the individual and change its value within the bound  
+Single point mutation: randomly select two positions on the individual and swap their values.  
 ## 3.7. Generational selection strategy.
 elitist selection: Select top-P best individuals including offsprings in the current generation as the population of the next generation.
 # 4. How to run your project.
