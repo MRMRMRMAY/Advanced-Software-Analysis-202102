@@ -48,3 +48,5 @@ elitist selection: Select top-P best individuals including offsprings in the cur
 # 4. How to run your project.
 Load the probject using pychrom, execute the file "main.py"
 # 5. How to adjust parameters.
+The variables from line 15 to line 24 in "main.py" correspond to the mentioned parameters.  
+You could change all variables except K which should be associated with the input file.  
