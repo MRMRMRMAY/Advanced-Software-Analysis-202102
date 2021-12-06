@@ -51,7 +51,8 @@ Single point mutation: randomly select two positions on the individual and swap 
 mixed selection: alpha * 100% of the next generation population are the elitists in the current generation, the rest are the individuals which are randomly sampled from the current generation without replicate.  
 (elitist selection: Select top-P best individuals including offsprings in the current generation as the population of the next generation.)  
 # 4. How to run your project.
-Load the probject using pychrom, execute the file "main.py"
+Load the probject using pychrom, execute the file "main.py" in the SourceCode.  
+Please check whether you have installed the packages: numpy, scipy and matplotlib before executing.  
 # 5. How to adjust parameters.
 The variables from line 15 to line 24 in "main.py" correspond to the mentioned parameters.  
-You could change all variables except K which should be associated with the input file.  
+You could adjust all variables except K which should be associated with the input file and fileName.  
