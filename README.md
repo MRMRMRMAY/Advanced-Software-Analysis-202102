@@ -52,7 +52,7 @@ mixed selection: alpha * 100% of the next generation population are the elitists
 (elitist selection: Select top-P best individuals including offsprings in the current generation as the population of the next generation.)  
 # 4. How to run your project.
 Load the probject using pychrom, execute the file "main.py" in the SourceCode.  
-Hint: You should install the packages: numpy, scipy and matplotlib before executing.  
+Please check whether you have installed the packages: numpy, scipy and matplotlib before executing.  
 # 5. How to adjust parameters.
 The variables from line 15 to line 24 in "main.py" correspond to the mentioned parameters.  
 You could adjust all variables except K which should be associated with the input file and fileName.  
