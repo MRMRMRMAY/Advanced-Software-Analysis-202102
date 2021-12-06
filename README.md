@@ -9,15 +9,19 @@ The topic is grouping K nodes into N clusters, where N is no more than a given i
 The nodes can be grouped into cluster if they all locate within radius r of the point with the XY-coordinate that is the geometric mean of those nodes' XY-coordinates.  
 # 3. Design decision explaining why you select:
 ## 3.1. Parameters such as the size of an initial population.
+
 The number of the nodes, K: 100;  
 The required maximum number of clusters, M: 50;  
+The ratio of the elitist to the next generation population, alpha: 0.5
 The size of population, P: [1000, inif), 1000 (R: Larger population can acelerate the convergence of the algorithm at the expense of time cost);  
 The probability of mutation: [0, 0.5], 0.2 (R: If more than 0.5, the algorithm is the same as the random strategy);  
-The round of crossover: [P/2, P], P (R: More offsprings can acelerate the convergence of the algorithm at the expense of time cost);  
-The individual: an array with the size of K  
+The round of crossover: [P/10, P], P (R: More offsprings can acelerate the convergence of the algorithm at the expense of time cost);  
 The radius, r: 100 (R: it is not determined yet)  
-The maximum interval interval between two generation where best-so-far result occurs, Max_inter: 1000.  
+The maximum interval interval between two generation where best-so-far result occurs, Max_inter: 500.  
+The input file name: "./centroid_blobs_ILP.txt"  
+The output file name: "./centers_second.txt" 
 
+The individual: an array with the size of K  
 The individual example (5 nodes):
 |node ID|1|2|3|4|5|
 |-|-|-|-|-|-|
@@ -44,7 +48,10 @@ Double points crossover
 ## 3.6. Mutation operator.
 Single point mutation: randomly select two positions on the individual and swap their values.  
 ## 3.7. Generational selection strategy.
-elitist selection: Select top-P best individuals including offsprings in the current generation as the population of the next generation.
+mixed selection: alpha * 100% of the next generation population are the elitists in the current generation, the rest are the individuals which are randomly sampled from the current generation without replicate.  
+(elitist selection: Select top-P best individuals including offsprings in the current generation as the population of the next generation.)  
 # 4. How to run your project.
 Load the probject using pychrom, execute the file "main.py"
 # 5. How to adjust parameters.
+The variables from line 15 to line 24 in "main.py" correspond to the mentioned parameters.  
+You could change all variables except K which should be associated with the input file.  
