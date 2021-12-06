@@ -54,4 +54,4 @@ mixed selection: alpha * 100% of the next generation population are the elitists
 Load the probject using pychrom, execute the file "main.py"
 # 5. How to adjust parameters.
 The variables from line 15 to line 24 in "main.py" correspond to the mentioned parameters.  
-You could change all variables except K which should be associated with the input file.  
+You could adjust all variables except K which should be associated with the input file and fileName.  
