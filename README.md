@@ -22,6 +22,7 @@ The individual example (5 nodes):
 |node ID|1|2|3|4|5|
 |-|-|-|-|-|-|
 |label|0|0|1|0|1|  
+
 if label is 1, the corresponding node is the center of a cluster
 ## 3.2. Stopping criteria.
 The interval between two generation where best-so-far result occurs is more than Max_inter.
