@@ -17,7 +17,7 @@ The size of population, P: [1000, inif), 1000 (R: Larger population can acelerat
 The probability of mutation: [0, 0.5], 0.2 (R: If more than 0.5, the algorithm is the same as the random strategy);  
 The round of crossover: [P/2, P], P (R: More offsprings can acelerate the convergence of the algorithm at the expense of time cost);  
 The radius, r: 100 (R: it is not determined yet)  
-The maximum interval interval between two generation where best-so-far result occurs, Max_inter: 1000.  
+The maximum interval interval between two generation where best-so-far result occurs, Max_inter: 500.  
 The input file name: "./centroid_blobs_ILP.txt"  
 The output file name: "./centers_second.txt" 
 
