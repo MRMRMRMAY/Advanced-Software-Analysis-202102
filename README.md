@@ -32,6 +32,7 @@ if label is 1, the corresponding node is the center of a cluster
 The interval between two generation where best-so-far result occurs is more than Max_inter.
 ## 3.3. Fitness function.
 ![image](https://github.com/MRMRMRMAY/Advanced-Software-Analysis-202102/blob/main/fitness2.png)
+M is the threshold on the number of cluster. Noted that the number of generated cluster should be less than M.  
 error is the number of nodes which are not covered by any cluster.  
 O is the amount of overlaps.  
 C is the set of cluster center.  
