@@ -226,25 +226,33 @@ def gen_algo():
         # prob = sigma_IFPS(pop);
         # prob = windowing_IFPS(pop);
         # prob = FPS(pop);
+        existing_groups = [ind.groups.tolist() for ind in nextPop]
         for iid in range(round_crossover):
             # parent selection
             # p1, p2 = selection(pop, prob)
             p1, p2 = selection(pop)
             # crossover
-            c1, c2 = crossover(list(p1.labels), list(p2.labels))
-            ind1, ind2 = Ind(distM=distM, labels=c1, r=r, M=M), Ind(distM=distM, labels=c2, r=r, M=M)
-            nextPop.append(ind1)
-            nextPop.append(ind2)
+            c1, c2 = crossover(p1.groups.tolist(), p2.groups.tolist())
+            if c1.tolist() not in existing_groups:
+                existing_groups.append(c1.tolist())
+                ind1 = Ind(distM=distM, groups=c1, r=r, M=M)
+                nextPop.append(ind1)
+            if c2.tolist() not in existing_groups:
+                existing_groups.append(c2.tolist())
+                ind2 = Ind(distM=distM, groups=c2, r=r, M=M)
+                nextPop.append(ind2)
             # mutation
             if random.random() >= pro_mutation:
-                nc1 = mutation(c1, K)
-                if nc1.tolist() != c1.tolist():
-                    ind1 = Ind(distM=distM, labels=nc1, r=r, M=M)
+                nc1 = mutation(deepcopy(c1), K)
+                if nc1.tolist() not in existing_groups:
+                    existing_groups.append(nc1.tolist())
+                    ind1 = Ind(distM=distM, groups=nc1, r=r, M=M)
                     nextPop.append(ind1)
             if random.random() >= pro_mutation:
-                nc2 = mutation(c2, K)
-                if nc2.tolist() != c2.tolist():
-                    ind2 = Ind(distM=distM, labels=nc2, r=r, M=M)
+                nc2 = mutation(deepcopy(c2), K)
+                if nc2.tolist() not in existing_groups:
+                    existing_groups.append(nc2.tolist())
+                    ind2 = Ind(distM=distM, groups=nc2, r=r, M=M)
                     nextPop.append(ind2)
         nextPop.sort(reverse=True)
         # pop = nextPop[0:good_num] + nextPop[len(nextPop)-bad_num:]
