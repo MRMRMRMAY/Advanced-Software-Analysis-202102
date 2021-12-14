@@ -22,6 +22,7 @@ r = 100 # The radius of cluster region
 max_interval = 500 # The maximum interval between old and new best-so-far results.
 input_fName = "./centroid_blobs_ILP.txt";
 out_fName = "./centers_second.txt";
+
 class Ind:
     # initialize the attributes
     def __init__(self, distM, labels, r, M):  # bound: random
@@ -152,15 +153,20 @@ def calculate_disM(X):
 
 
 # generate the individual
-def gen_indiv(distM, radius, K):
+def gen_indiv(distM, radius, K, existing_labels):
     global M
-    new_labels = np.array(random.choices([0, 1], k=K))
+    labels = random.choices([0, 1], k=K)
+    if labels in existing_labels:
+        labels = random.choices([0, 1], k=K)
+    existing_labels.append(labels)
+    new_labels = np.array(labels)
     return Ind(distM=distM, labels=new_labels, r=radius, M=M)
 
 
 # generate the initial population
 def gen_pop(popSize, distM, radius, K):
-    return [gen_indiv(distM, radius, K) for i in range(popSize)];
+    existing_labels = [];
+    return [gen_indiv(distM, radius, K, existing_labels) for i in range(popSize)];
 
 
 def mutation(seq, K):
